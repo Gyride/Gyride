@@ -11,6 +11,8 @@ $(document).ready(function () {
 
     var option = 3;
 
+    var moves = 0;
+
     var arrayPosition = function (tile) {
         var position = [];
 
@@ -217,6 +219,10 @@ $(document).ready(function () {
     }
 
     $(".content").on("click", "img", function (e) {
+        moves = moves + 1;
+
+        $("span").html("Moves: " + moves);
+
         var tile = $(this).attr("id");
 
         var pos = arrayPosition(tile);
@@ -240,6 +246,10 @@ $(document).ready(function () {
         if (!($("#win").hasClass("hide"))){
             $("#win").toggleClass("hide");
         }
+
+        moves = 0;
+
+        $("span").html("Moves: " + moves);
     });
 
     $("select").change(function(){
@@ -254,6 +264,10 @@ $(document).ready(function () {
                     ["seven", "eight", "blank"] ];
 
           randomized = 0;
+
+          moves = 0;
+
+          $("span").html("Moves: " + moves);
 
           if (option == 4) {
               for (var i = 8; i < 15; i++) {
@@ -286,6 +300,10 @@ $(document).ready(function () {
                     ["thirteen", "fourteen", "fifteen", "blank"] ];
 
           randomized = 0;
+
+          moves = 0;
+
+          $("span").html("Moves: " + moves);
 
           if (option == 3) {
               for (var i = 8; i < 15; i++) {
@@ -320,6 +338,10 @@ $(document).ready(function () {
                     ["twentyone", "twentytwo", "twentythree", "twentyfour", "blank"] ];
 
           randomized = 0;
+
+          moves = 0;
+
+          $("span").html("Moves: " + moves);
 
           if (option == 3) {
               for (var i = 8; i < 24; i++) {
