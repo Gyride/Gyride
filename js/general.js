@@ -13,6 +13,9 @@ $(document).ready(function () {
 
     var moves = 0;
 
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'https://www.soundjay.com/button/sounds/beep-29.mp3');
+
     var arrayPosition = function (tile) {
         var position = [];
 
@@ -222,6 +225,8 @@ $(document).ready(function () {
         moves = moves + 1;
 
         $("span").html("Moves: " + moves);
+
+        audioElement.play();
 
         var tile = $(this).attr("id");
 
