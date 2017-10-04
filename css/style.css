@@ -62,7 +62,7 @@ body {
 
 .parent {
   position: relative;
-  width: 40%;
+  width: 80vh;
   margin: 10px auto;
 }
 .aspect-ratio {
